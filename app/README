@@ -1,0 +1,9 @@
+from app.database.models import Base
+target_metadata = Base.metadata
+
+postgresql://openpg:openpgpwd@localhost:5432/fast_git
+
+alembic init migrations
+alembic revision --autogenerate -m "create models"
+
+alembic upgrade head
